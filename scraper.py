@@ -28,7 +28,7 @@ import scraperwiki
 import lxml.html
 html = scraperwiki.scrape("http://foo.com")
 
-print ("html");
+print (html);
 root = lxml.html.fromstring(html)
 root.cssselect("div[align='left']")
 scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
